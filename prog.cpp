@@ -51,15 +51,17 @@ int countSetBits(int n)
 {
     // Your logic here
     int power2=2;
-    int totpairs;
+    int totalpairs;
     n++;
     int cnt=n/2;
     while(power2<=n)
     {
-        totpairs=n/power2;
+        totalpairs=n/power2;
         cnt+=((totpairs/2)*(power2));
         cnt+=(totpairs&1)?(n%power2):0;
         power2<<=1;
     }
     return cnt;
 }
+input: n=5
+ output: 16
